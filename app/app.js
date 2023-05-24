@@ -4,6 +4,11 @@ const db = require('../db/db').db;
 const app = express();
 app.use(express.json());
 
+// req.ip client address
+// req.query data after '?' in url
+// req.body get body of question
+// app .post .get .remove .patch crud
+
 app.get('/sql', (req, res) => {
     db.all('SELECT * FROM test;', [], (err, rows) => {
         if (err)
